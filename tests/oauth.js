@@ -225,7 +225,7 @@ vows.describe('OAuth').addBatch({
           return oa;
         },
         'getProtectedResource should correctly define the host headers': function(oa) {
-          oa.getProtectedResource("http://somehost.com:8080", "GET", "oauth_token", null, function(){})
+          oa.get("http://somehost.com:8080", "GET", "oauth_token", null, function(){})
         }
     },
     'When building the OAuth Authorization header': {
