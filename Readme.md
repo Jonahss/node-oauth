@@ -38,7 +38,7 @@ describe('OAuth1.0',function(){
       'https://api.twitter.com/1.1/trends/place.json?id=23424977',
       'your user toke for this app', //test user token
       'your user secret for this app', //test user secret            
-      function (e, data, res){
+      function (e, res, data){
         if (e) console.error(e);        
         console.log(require('util').inspect(data));
         done();      
