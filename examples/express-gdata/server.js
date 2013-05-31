@@ -125,7 +125,7 @@ app.get('/google_contacts', require_google_login, function(req, res) {
 		"GET", 
 		req.session.oauth_access_token, 
 		req.session.oauth_access_token_secret,
-		function (error, data, response) {
+		function (error, response, data) {
 			
 			var feed = JSON.parse(data);
 			
@@ -153,7 +153,7 @@ app.get('/google_calendars', require_google_login, function(req, res) {
 		"GET", 
 		req.session.oauth_access_token, 
 		req.session.oauth_access_token_secret,
-		function (error, data, response) {
+		function (error, response, data) {
 			
 			var feed = JSON.parse(data);
 			

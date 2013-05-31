@@ -23,7 +23,7 @@ oa.getOAuthRequestToken(function(error, oauth_token, oauth_token_secret, results
       util.puts('accesstoken results :' + util.inspect(results2))
       util.puts("Requesting access token")
       var data= "";
-      oa.getProtectedResource("http://term.ie/oauth/example/echo_api.php?foo=bar&too=roo", "GET", oauth_access_token, oauth_access_token_secret,  function (error, data, response) {
+      oa.getProtectedResource("http://term.ie/oauth/example/echo_api.php?foo=bar&too=roo", "GET", oauth_access_token, oauth_access_token_secret,  function (error, response, data) {
           util.puts(data);
       });
     });
